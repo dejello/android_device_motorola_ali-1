@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.bluetooth@1.0-impl
+    libbt-vendor
 
 # GPS
 PRODUCT_COPY_FILES += \
