@@ -65,15 +65,14 @@ TARGET_SCREEN_HEIGHT := 2160
 
 # Camera
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     libxml2 \
     Snap \
     vendor.qti.hardware.vpp@1.1 \
-    vendor.qti.hardware.vpp@1.1_vendor \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    vendor.qti.hardware.vpp@1.1_vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
