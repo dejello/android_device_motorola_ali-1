@@ -137,6 +137,9 @@ TARGET_EXFAT_DRIVER := exfat
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
