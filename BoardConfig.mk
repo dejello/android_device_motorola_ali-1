@@ -104,6 +104,14 @@ ENABLE_SCHEDBOOST := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+# Dexpreopt to speed boot time
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT := true
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+
 # Display
 BOARD_USES_ADRENO := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
