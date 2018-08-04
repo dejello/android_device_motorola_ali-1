@@ -103,6 +103,11 @@ PRODUCT_PACKAGES += \
     memtrack.msm8953 \
     libgenlock
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
