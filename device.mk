@@ -42,6 +42,18 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 # GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti \
+    libcurl \
+    libgnss \
+    libgnsspps \
+    libgps.utils \
+    liblocation_api \
+    libloc_core \
+    libloc_pla \
+    libvehiclenetwork-native
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
