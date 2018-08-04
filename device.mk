@@ -63,6 +63,19 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2160
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0 \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@3.2-impl \
+    camera.device@1.0-impl \
+    libxml2 \
+    Snap \
+    vendor.qti.hardware.vpp@1.1 \
+    vendor.qti.hardware.vpp@1.1_vendor \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0_vendor
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
