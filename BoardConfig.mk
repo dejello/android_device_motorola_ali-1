@@ -37,6 +37,19 @@ TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
 
+# Kernel
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237
+BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=350M
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
+TARGET_CUSTOM_DTBTOOL := dtbTool_custom
+BOARD_DTBTOOL_ARGS := --force-v3 --motorola 1
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+TARGET_KERNEL_ARCH := arm
+TARGET_KERNEL_CONFIG := ali_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
