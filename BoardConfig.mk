@@ -152,6 +152,9 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
