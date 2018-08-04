@@ -180,6 +180,12 @@ BOARD_USES_QCOM_HARDWARE := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
+# Seccomp
+BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_ali
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ali
