@@ -97,6 +97,10 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
+# CPUSets
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
