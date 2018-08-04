@@ -339,10 +339,10 @@ PRODUCT_COPY_FILES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-	telephony-ext
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
-	telephony-ext
+    telephony-ext
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
@@ -353,6 +353,10 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.msm8953
+
+# Touchscreen
+PRODUCT_PACKAGES += \
+    libtinyxml2
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
