@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service-qti \
     libbt-vendor
 
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2160
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
