@@ -317,7 +317,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
 PRODUCT_BOOT_JARS += \
-     qcrilhook
+    qcrilhook
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -357,6 +357,10 @@ PRODUCT_PACKAGES += \
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
