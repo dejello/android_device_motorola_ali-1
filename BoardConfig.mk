@@ -180,6 +180,9 @@ TARGET_USES_INTERACTION_BOOST := true
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+#QTI
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
