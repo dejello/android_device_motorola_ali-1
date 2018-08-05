@@ -189,6 +189,9 @@ BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
+# Thermal
+USE_DEVICE_SPECIFIC_THERMAL := true
+
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
