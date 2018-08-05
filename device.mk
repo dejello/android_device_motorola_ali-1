@@ -65,7 +65,6 @@ TARGET_SCREEN_HEIGHT := 2160
 
 # Camera
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
     android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
@@ -77,6 +76,9 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
+
+# Dalvik overrides
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
