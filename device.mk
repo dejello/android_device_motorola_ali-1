@@ -333,6 +333,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.1 \
     android.hardware.radio.deprecated@1.0 \
     rild \
+    libril \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full
