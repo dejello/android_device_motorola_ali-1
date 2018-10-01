@@ -1,1 +1,1 @@
-add_lunch_combo omni_addison-userdebug
+add_lunch_combo omni_ali-userdebug

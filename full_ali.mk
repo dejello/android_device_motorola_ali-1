@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := addison
-PRODUCT_NAME := full_addison
+PRODUCT_DEVICE := ali
+PRODUCT_NAME := full_ali
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto Z Play
+PRODUCT_MODEL := Moto G6
 PRODUCT_MANUFACTURER := motorola
