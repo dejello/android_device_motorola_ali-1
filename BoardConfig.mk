@@ -31,17 +31,19 @@ TARGET_BOARD_PLATFORM := msm8953
 TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 TARGET_NO_BOOTLOADER := true
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dt.img
-
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 vmalloc=400M androidboot.selinux=permissive
+# For the love of all that is holy, please do not include this in your ROM unless you really want TWRP to not work correctly!
+# Thanks to Erfanoabdi for this CMDLINE
+BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+TARGET_KERNEL_SOURCE := kernel/motorola/ali
+TARGET_KERNEL_CONFIG := ali_defconfig
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androidkernel-
+LZMA_RAMDISK_TARGETS := recovery
 
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -58,6 +60,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_CRYPTO := true
+PLATFORM_SECURITY_PATCH := 2025-12-31
 
 # TWRP
 RECOVERY_SDCARD_ON_DATA := true
