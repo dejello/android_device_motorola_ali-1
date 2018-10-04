@@ -1,1 +1,1 @@
-add_lunch_combo omni_ali-userdebug
+add_lunch_combo lineage_ali-userdebug

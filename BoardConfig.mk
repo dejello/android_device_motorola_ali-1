@@ -36,6 +36,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0
 # Thanks to Erfanoabdi for this CMDLINE
 BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
 BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -63,6 +64,7 @@ TW_INCLUDE_CRYPTO := true
 PLATFORM_SECURITY_PATCH := 2025-12-31
 
 # TWRP
+TW_DEVICE_VERSION := | TheStrechh
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_FSTAB := device/motorola/ali/twrp.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
@@ -72,6 +74,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TW_NEW_ION_HEAP := true
 TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_EXTRA_LANGUAGES := true
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
