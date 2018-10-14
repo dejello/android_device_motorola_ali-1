@@ -1,7 +1,7 @@
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    chmod 0660 /dev/qseecom
+    chmod 0777 /dev/qseecom
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
@@ -66,7 +66,6 @@ on init
     setprop ro.hardware.gatekeeper msm8953
     setprop ro.build.system_root_image true
     start prepdecrypt
-    #setprop crypto.ready 1
 
 on property:crypto.ready=1
     start hwservicemanager
