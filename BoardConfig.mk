@@ -18,6 +18,9 @@ DEVICE_PATH := device/motorola/ali
 
 TARGET_RECOVERY_DEVICE_DIRS := $(DEVICE_PATH)
 
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := ali,ali_retail
+
 TARGET_ARCH := arm
 TARGET_CPU_ABI  := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
