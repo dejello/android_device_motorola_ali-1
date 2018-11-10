@@ -9,7 +9,8 @@ on fs
     install_keyring
 
 # separate copy needed to use /sbin/linker instead of /system/bin/linker
-service sbinqseecomd /sbin/qseecomd
+service sbin_qseecomd /sbin/qseecomd
+    oneshot
     disabled
     user root
     group root
@@ -62,21 +63,25 @@ service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service-qti
     seclabel u:r:recovery:s0
 
 on init
-    setprop ro.hardware.keystore msm8953
-    setprop ro.hardware.gatekeeper msm8953
-    setprop ro.build.system_root_image true
-    start prepdecrypt
-
-on property:crypto.ready=1
     start hwservicemanager
-    start keymaster-3-0
-    start gatekeeper-1-0
+    start boot-1-0
+    start prepdecrypt
     start sbinqseecomd
-    start servicemanager
 
 on property:crypto.ready=0
     stop sbinqseecomd
     stop keymaster-3-0
     stop gatekeeper-1-0
-    stop hwservicemanager
     stop servicemanager
+
+on property:crypto.ready=1
+    start sbinqseecomd
+    start keymaster-3-0
+    start gatekeeper-1-0
+    start servicemanager
+
+on property:ro.crypto.state=encrypted
+    start sbin_qseecomd
+
+on property:ro.crypto.fs_crypto_blkdev=/dev/block/dm-0
+    stop sbin_qseecomd
