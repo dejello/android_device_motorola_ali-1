@@ -199,6 +199,8 @@ USE_DEVICE_SPECIFIC_THERMAL := true
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_ali
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ali
